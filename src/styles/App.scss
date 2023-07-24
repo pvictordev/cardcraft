@@ -1,3 +1,133 @@
-label {
-    color: red;
+.CardCraft {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 5% 0 0 0;
 }
+.CardCraft_card {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Montserrat', sans-serif;
+
+    .card_front{
+        background: linear-gradient(#e66465, #9198e5);
+        position: relative;
+        width: 350px;
+        height: 200px;
+        color: white;
+        mix-blend-mode: lighten;
+        margin-bottom: 30px;
+        padding: 10px;
+        border-radius: 10px;
+        
+        .card_details {
+            display: flex;
+            justify-content: space-between;
+        }
+        .front_icons {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 35px;
+            font-size: 25px;
+        } 
+
+        .front_number {
+            margin-bottom: 35px;
+            font-size: 25px;
+        }
+
+        .paymentNetwork {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            padding-right: 10px;
+            font-size: 25px;
+        }
+    }
+    
+
+    .card_reverso {
+        width: 350px;
+        height: 200px;
+        background-color: rgb(229, 230, 238);
+       
+        border-radius: 10px;
+
+        hr{
+            margin-top: 20px;
+            height: 40px;
+            background-color: #333;
+            border: 2px solid #333;
+        }
+        div {
+            padding:10px;
+            border-radius:5px ;
+            background-color: rgb(201, 202, 212);
+            margin: 20px 40px;
+            text-align: right;
+            
+        }
+        
+    }
+   
+    
+}
+.CardCraft_form {
+    font-family: 'Space Grotesk', sans-serif;
+    color: #333;
+    
+    input::placeholder {
+        font-family: 'Space Grotesk', sans-serif;
+    }
+
+    .column_form {
+        display: flex;
+        flex-direction: column;
+        label {
+            font-size: 15px;
+            margin-bottom: 10px;
+        }
+        input {
+            padding: 5px;
+            border-radius: 5px;
+            border: 1px solid  rgb(178, 179, 186);
+            margin-bottom: 20px;
+            width: 300px;
+        }
+
+    }
+    .expire {
+        margin-right: 18px;
+    }
+
+    .row_form {
+        display: flex;
+        flex-direction: row;
+        input {
+            width: 70px;
+            margin: 10px 10px 20px 0;
+            padding: 5px;
+            border-radius: 5px;
+            border: 1px solid  rgb(178, 179, 186);
+        }
+        
+        input:nth-child(3) {
+            width: 140px;
+        };
+       
+      
+    }
+    
+   
+    button {
+        margin-top: 10px;
+        padding: 10px;
+        border-radius: 5px;
+        background-color: #333;
+        color: #fff;
+        border: none;
+        width: 300px;
+    }
+
+}
+
