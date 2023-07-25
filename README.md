@@ -1,3 +1,3 @@
 # CARDCRAFT
-# Graphic Editor for creating Credit Cards design 
+# Graphic Editor App for creating Credit Cards design 
 
