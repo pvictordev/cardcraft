@@ -5,150 +5,144 @@
     justify-content: space-around;
     margin: 5% 20px 20px 20px;
     flex-wrap: wrap;
-}
-.CardCraft_card {
-    display: flex;
-    flex-direction: column;
-    font-family: 'Montserrat', sans-serif;
-    // margin-right: 75px;
 
-    .card_front{
-        background: linear-gradient(#cc2b5e, #753a88) ;
-        position: relative;
-        width: 430px;
-        height: 270px;
-        font-size: 35px;
-        color: white;
-        mix-blend-mode: lighten;
-        margin-bottom: 30px;
-        padding: 15px;
-        border-radius: 15px;
-        
-        .card_details {
-            display: flex;
-            justify-content: space-between;
-            font-size: 25px;
-        }
-        .front_icons {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 40px;
-           
-        } 
-
-        .front_number {
-            margin-bottom: 40px;
-            
-        }
-
-        .paymentNetwork {
-            position: absolute;
-            bottom: 0;
-            right: 0;
-            padding-right: 15px;
-           
-        }
-    }
-    
-
-    .card_reverso {
-        width: 430px;
-        height: 270px;
-        background-color: rgb(229, 230, 238);
-       
-        border-radius: 15px;
-
-        hr{
-            margin-top: 20px;
-            height: 40px;
-            background-color: #333;
-            border: 2px solid #333;
-        }
-        div {
-            padding:10px;
-            border-radius:5px ;
-            background-color: rgb(201, 202, 212);
-            margin: 30px 40px;
-            text-align: right;
-            font-size: 20px;
-            height: 40px;
-            
-        }
-        
-    }
-   
-    
-}
-
-.CardCraft_form {
-    font-family: 'Space Grotesk', sans-serif;
-    color: #333;
-    margin-top: 50px;
-    
-   
-    
-    input::placeholder {
-        font-family: 'Space Grotesk', sans-serif;
-        font-size: 15px;
-    }
-
-    .column_form {
+    .CardCraft_card {
         display: flex;
         flex-direction: column;
-        label {
-            font-size: 20px;
-            margin-bottom: 10px;
-        }
-        input {
-            padding: 5px;
-            border-radius: 5px;
-            border: 1px solid  rgb(178, 179, 186);
+        font-family: 'Montserrat', sans-serif;
+    
+        .card_front{
+            background: linear-gradient(#cc2b5e, #753a88) ;
+            position: relative;
+            width: 430px;
+            height: 270px;
+            font-size: 35px;
+            color: white;
+            mix-blend-mode: lighten;
             margin-bottom: 30px;
-            width: 400px;
-            height: 40px;
+            padding: 15px;
+            border-radius: 15px;
+            
+            .card_details {
+                display: flex;
+                justify-content: space-between;
+                font-size: 25px;
+            }
+            .front_icons {
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 40px;
+               
+            } 
+    
+            .front_number {
+                margin-bottom: 40px;
+                
+            }
+    
+            .paymentNetwork {
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                padding-right: 15px;
+               
+            }
         }
         
-
-    }
-    .expire {
-        margin-right: 43px;
-        font-size: 20px;
-    }
-    .cvc {
-        font-size: 20px;
-    }
-
-    .row_form {
-        display: flex;
-        flex-direction: row;
-        input {
-            width: 100px;
-            margin: 10px 10px 30px 0;
-            padding: 5px;
-            border-radius: 5px;
-            border: 1px solid  rgb(178, 179, 186);
+        .card_reverso {
+            width: 430px;
+            height: 270px;
+            background-color: rgb(229, 230, 238);
+           
+            border-radius: 15px;
+    
+            hr{
+                margin-top: 20px;
+                height: 40px;
+                background-color: #333;
+                border: 2px solid #333;
+            }
+            div {
+                padding:10px;
+                border-radius:5px ;
+                background-color: rgb(201, 202, 212);
+                margin: 30px 40px;
+                text-align: right;
+                font-size: 20px;
+                height: 40px;
+                
+            }
+            
         }
-        
-        input:nth-child(3) {
-            width: 180px;
-        };
        
-      
     }
     
-   
-    button {
-        margin-top: 10px;
-        padding: 10px;
-        border-radius: 5px;
-        background-color: #333;
-        color: #fff;
-        border: none;
-        width: 400px;
-        font-size: 15px;
+    .CardCraft_form {
+        font-family: 'Space Grotesk', sans-serif;
+        color: #333;
+        margin-top: 50px;
+         
+        input::placeholder {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 15px;
+        }
+    
+        .column_form {
+            display: flex;
+            flex-direction: column;
+            label {
+                font-size: 20px;
+                margin-bottom: 10px;
+            }
+            input {
+                padding: 5px;
+                border-radius: 5px;
+                border: 1px solid  rgb(178, 179, 186);
+                margin-bottom: 30px;
+                width: 400px;
+                height: 40px;
+            }
+            
+        }
+        .expire {
+            margin-right: 43px;
+            font-size: 20px;
+        }
+        .cvc {
+            font-size: 20px;
+        }
+    
+        .row_form {
+            display: flex;
+            flex-direction: row;
+            input {
+                width: 100px;
+                margin: 10px 10px 30px 0;
+                padding: 5px;
+                border-radius: 5px;
+                border: 1px solid  rgb(178, 179, 186);
+            }
+            
+            input:nth-child(3) {
+                width: 180px;
+            };
+           
+        }
+        
+        button {
+            margin-top: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            width: 400px;
+            font-size: 15px;
+        }
+    
     }
-
 }
+
 
 @media (max-width: 450px) {
    
