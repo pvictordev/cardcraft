@@ -3,17 +3,23 @@ import Card from "./Card";
 import Form from "./Form";
 
 function CardCraft() {
-    const [inputValue, setInputValue] = useState(''); 
 
-    const handleChange = (value) => {
-        setInputValue(value)
+    const [inputValues, setInputValues] = useState({
+        input1:'', 
+        input2:'', 
+        input3:'', 
+        input4:'', 
+        input5:'',         
+
+    })
+    const handleInputChange = (name, value) => {
+        setInputValues({...inputValues, [name]:value});
     }
-
 
     return(
         <div className="CardCraft">
-            <Card inputValue={inputValue}/>
-            <Form onChange={handleChange}/>
+            <Card inputValues={inputValues} />
+            <Form inputValues={inputValues} onInputChange={handleInputChange}  />
         </div>
     )
     

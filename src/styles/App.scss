@@ -1,3 +1,4 @@
+
 .CardCraft {
     display: flex;
     flex-direction: row;
@@ -70,6 +71,7 @@
             margin: 30px 40px;
             text-align: right;
             font-size: 20px;
+            height: 40px;
             
         }
         
@@ -77,6 +79,7 @@
    
     
 }
+
 .CardCraft_form {
     font-family: 'Space Grotesk', sans-serif;
     color: #333;
@@ -108,7 +111,7 @@
 
     }
     .expire {
-        margin-right: 42px;
+        margin-right: 43px;
         font-size: 20px;
     }
     .cvc {
@@ -148,29 +151,27 @@
 }
 
 @media (max-width: 450px) {
+   
     .CardCraft_card {
-        display: flex;
-        flex-direction: column;
-        font-family: 'Montserrat', sans-serif;
        
-    
         .card_front{
-            width: 350px;
-            height: 210px;
-            font-size: 25px;
+            width: 280px;
+            height: 140px;
+            font-size: 17px;
             margin-bottom: 30px;
-          
+            border-radius: 12px;
+            
         
             .card_details {
-                font-size: 20px;
+                font-size: 12px;
             }
             .front_icons {
-                margin-bottom: 30px;
+                margin-bottom: 15px;
                
             } 
     
             .front_number {
-                margin-bottom: 30px;
+                margin-bottom: 15px;
                 
             }
     
@@ -182,16 +183,17 @@
         
     
         .card_reverso {
-            width: 350px;
-            height: 210px;
+            width: 280px;
+            height: 140px;
     
             hr{
-                height: 40px;
+                height: 25px;
             }
             div { 
-                margin: 30px 40px;
-                font-size: 15px;
-                
+                margin: 15px 40px;
+                font-size: 8px;
+                padding: 6px;
+                height: 20px;
             }
             
         }
@@ -199,6 +201,7 @@
         
     }
     .CardCraft_form {
+  
         margin-top: 40px;        
         input::placeholder {
             font-size: 15px;
@@ -207,33 +210,33 @@
         .column_form {
             margin-left: 20px;
             label {
-                font-size: 15px;
+                font-size: 13px;
             }
             input {
                 margin-bottom: 20px;
                 margin-right: 20px;
-                width: 350px;
-                height: 35px;
+                width: 280px;
+                height: 30px;
             }
             
     
         }
         .expire {
-            margin-right: 42px;
+            margin-right: 26px;
             margin-left: 20px;
-            font-size: 15px;
+            font-size: 13px;
         }
         .cvc {
-            font-size: 15px;
+            font-size: 13px;
         }
     
         .row_form {
- 
+            
             input:first-child {
                 margin-left: 20px;
             }
             input {
-                width: 75.5px;
+                width: 60px;
                 margin: 10px 10px 20px 0;
                 padding: 5px;
                 border-radius: 5px;
@@ -241,7 +244,7 @@
             }
             
             input:nth-child(3) {
-                width: 180px;
+                width: 140px;
             };
            
           
@@ -249,10 +252,17 @@
         
         button {
             margin-left: 20px;       
-            width: 350px;
+            width: 280px;
             font-size: 15px;
         }
     
     }
-
+}
+@media(max-width:315px) {
+    .CardCraft_card {
+        margin-left: 20px;
+    }
+    .CardCraft_form {
+        margin-left: 20px;
+    }
 }
