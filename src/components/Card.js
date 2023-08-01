@@ -4,10 +4,18 @@ import {LuNfc} from 'react-icons/lu';
 import {FaCcMastercard, FaCcVisa} from 'react-icons/fa';
 
 function Card({ inputValues }) {
+    const addSpacesToNumber = (number) => {
+        return number.replace(/\s/g, '').replace(/(.{4})/g, '$1 ');
+    }
+    const expire = (num) => {
+        if(num !== '') {
+            return num +  ' /'
+        }
+    } 
 
-    const hasText = React.Children.toArray('cardDet').some(
-        (child) => typeof child === 'string'
-      );
+ 
+
+
     return(
         <div className="CardCraft_card">
 
@@ -18,7 +26,7 @@ function Card({ inputValues }) {
             <LuNfc/>   
         </div>
             
-            <p className='front_number'>{inputValues.input1}</p>
+            <p className='front_number'>{addSpacesToNumber(inputValues.input1)} </p>
 
             <div className='card_details'>
                 <p> 
@@ -28,13 +36,13 @@ function Card({ inputValues }) {
                 </p> 
 
                 <p>
-                <span className="cardDet">{inputValues.input3}</span> <span>{inputValues.input4}</span>
+                <span className="cardDet">{expire(inputValues.input3)}</span> <span>{inputValues.input4}</span>
                 </p>
             </div>
         
 
             <div className='paymentNetwork'>
-            <FaCcVisa className='visa'/>
+            {/* <FaCcVisa className='visa'/> */}
             {/* <FaCcMastercard className='mastercard'/> */}
             </div>
 
