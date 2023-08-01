@@ -145,9 +145,8 @@
 
 
 @media (max-width: 450px) {
-   
+    
     .CardCraft_card {
-       
         .card_front{
             width: 280px;
             height: 140px;
@@ -155,7 +154,6 @@
             margin-bottom: 30px;
             border-radius: 12px;
             
-        
             .card_details {
                 font-size: 12px;
             }
@@ -175,7 +173,6 @@
             }
         }
         
-    
         .card_reverso {
             width: 280px;
             height: 140px;
@@ -212,8 +209,6 @@
                 width: 280px;
                 height: 30px;
             }
-            
-    
         }
         .expire {
             margin-right: 26px;
@@ -260,3 +255,4 @@
         margin-left: 20px;
     }
 }
+
