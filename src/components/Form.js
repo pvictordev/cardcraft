@@ -20,7 +20,7 @@ function Form({ inputValues, onInputChange }) {
             value={inputValues.input1}
             onChange={handleInput}
           
-            placeholder='e.g. 1234567891011121'>
+            placeholder='e.g. 4321876512345678'>
             </input>
 
             <label>CARDHOLDER NAME</label>
