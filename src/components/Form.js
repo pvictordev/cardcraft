@@ -13,8 +13,9 @@ function Form({ inputValues, onInputChange }) {
         <div className='column_form'>
             <label>CARDHOLDER NUMBER</label>
             <input
-            
-            type="number"
+            maxLength={16}
+            max={16}
+            type="text"
             name="input1"
             value={inputValues.input1}
             onChange={handleInput}
@@ -24,6 +25,7 @@ function Form({ inputValues, onInputChange }) {
 
             <label>CARDHOLDER NAME</label>
             <input
+            maxLength={20}
             name="input2"
             value={inputValues.input2}
             onChange={handleInput}
@@ -40,7 +42,8 @@ function Form({ inputValues, onInputChange }) {
             <div className='row_form'>
             <input
            
-            type="number"
+            type="text"
+            maxLength={2}
             name="input3"
             value={inputValues.input3}
             onChange={handleInput}
@@ -49,7 +52,8 @@ function Form({ inputValues, onInputChange }) {
             </input> 
 
             <input
-            type="number"
+            type="text"
+            maxLength={2}
             name="input4"
             value={inputValues.input4}
             onChange={handleInput}
@@ -57,10 +61,9 @@ function Form({ inputValues, onInputChange }) {
             placeholder='YY'>
             </input>
             
-
-            
             <input
-            type="number"
+            type="text"
+            maxLength={3}
             name="input5"
             value={inputValues.input5}
             onChange={handleInput}
