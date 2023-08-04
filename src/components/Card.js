@@ -24,7 +24,6 @@ function Card({ inputValues }) {
         }
     } 
 
-
     const getPaymentNetworkIcon = (number) => {
         const firstDigit = number.substring(0,1);
     
