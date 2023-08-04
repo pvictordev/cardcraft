@@ -6,25 +6,54 @@ function Form({ inputValues, onInputChange }) {
         const { name, value } = e.target;
         onInputChange(name, value);
     };
-    
 
+    const handleNumberInput16 = (e) => {
+    const { name, value } = e.target;
+
+    const onlyNumbers = value.replace(/[^0-9]/g, "");
+
+    const maxLength = 16; 
+    const truncatedValue = onlyNumbers.slice(0, maxLength);
+    onInputChange(name, truncatedValue);
+    };
+
+    const handleNumberInput2 = (e) => {
+    const { name, value } = e.target;
+
+    const onlyNumbers = value.replace(/[^0-9]/g, "");
+    
+    const maxLength = 2; 
+    const truncatedValue = onlyNumbers.slice(0, maxLength);
+    onInputChange(name, truncatedValue);
+    };
+    
+    const handleNumberInput3 = (e) => {
+    const { name, value } = e.target;
+
+    const onlyNumbers = value.replace(/[^0-9]/g, "");
+
+    const maxLength = 3; 
+    const truncatedValue = onlyNumbers.slice(0, maxLength);
+    onInputChange(name, truncatedValue);
+    };
+    
     return (
         <form className="CardCraft_form">
         <div className='column_form'>
             <label>CARDHOLDER NUMBER</label>
             <input
-            maxLength={16}
-            max={16}
-            type="text"
+            type="number"
+            onChange={handleNumberInput16}
             name="input1"
             value={inputValues.input1}
-            onChange={handleInput}
-          
+            //onChange={handleInput}
+            
             placeholder='e.g. 4321876512345678'>
             </input>
 
             <label>CARDHOLDER NAME</label>
             <input
+            type="text"
             maxLength={20}
             name="input2"
             value={inputValues.input2}
@@ -41,32 +70,31 @@ function Form({ inputValues, onInputChange }) {
     
             <div className='row_form'>
             <input
-           
-            type="text"
-            maxLength={2}
+            type="number"
+            onChange={handleNumberInput2}
             name="input3"
             value={inputValues.input3}
-            onChange={handleInput}
+            //onChange={handleInput}
      
             placeholder='MM'>
             </input> 
 
             <input
-            type="text"
-            maxLength={2}
+            type="number"
+            onChange={handleNumberInput2}
             name="input4"
             value={inputValues.input4}
-            onChange={handleInput}
+            //onChange={handleInput}
       
             placeholder='YY'>
             </input>
             
             <input
-            type="text"
-            maxLength={3}
+            type="number"
+            onChange={handleNumberInput3}
             name="input5"
             value={inputValues.input5}
-            onChange={handleInput}
+            //onChange={handleInput}
      
             placeholder='e.g. 123'>
             

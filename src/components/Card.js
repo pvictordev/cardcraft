@@ -12,7 +12,6 @@ import {RiSecurePaymentLine} from 'react-icons/ri'
 //jcb = '3'
 //dc = '3', '0', '6', '8' or '9' 
 
-
 function Card({ inputValues }) {
     const addSpacesToNumber = (number) => {
         return number.replace(/\s/g, '').replace(/(.{4})/g, '$1 '); 
@@ -23,24 +22,25 @@ function Card({ inputValues }) {
         }
     } 
 
-    const getDigit = (number) => {
-        return number.charAt(0);
-    };
-
     const getPaymentNetworkIcon = (number) => {
-        const firstDigit = getDigit(number);
-        console.log(firstDigit)
-        switch (firstDigit) {
+        const firstDigits = number.substring(0,4);
+       
+        switch (firstDigits) {
             case '4':
                 return <FaCcVisa className='visa'/>;
             case '5':
             case '2':
                 return <FaCcMastercard className='mastercard'/>;
-            case '3':
-            case '7':
+            case '34':
+            case '37':
                 return <SiAmericanexpress className="amx"/>;  
             case '6':
                 return <FaCcDiscover className="discover"/>;
+            case '3':
+                return <FaCcJcb className="jcb"/> 
+            case '3068':
+            case '3069':
+                return <FaCcDinersClub className="dc"/> 
             default:
                 return <RiSecurePaymentLine/>;
         }
