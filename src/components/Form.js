@@ -7,7 +7,7 @@ function Form({ inputValues, onInputChange }) {
         onInputChange(name, value);
     };
 
-    const handleNumberInput16 = (e) => {
+    const handleNumberInputCM = (e) => {
     const { name, value } = e.target;
 
     const onlyNumbers = value.replace(/[^0-9]/g, "");
@@ -17,17 +17,27 @@ function Form({ inputValues, onInputChange }) {
     onInputChange(name, truncatedValue);
     };
 
-    const handleNumberInput2 = (e) => {
+    const handleNumberInputMM = (e) => {
     const { name, value } = e.target;
-
     const onlyNumbers = value.replace(/[^0-9]/g, "");
     
-    const maxLength = 2; 
-    const truncatedValue = onlyNumbers.slice(0, maxLength);
-    onInputChange(name, truncatedValue);
+    if(onlyNumbers <= 12) {
+        const maxLength = 2; 
+        const truncatedValue = onlyNumbers.slice(0, maxLength);
+        onInputChange(name, truncatedValue);
+    }
+    };
+    const handleNumberInputYY = (e) => {
+        const { name, value } = e.target;
+        const onlyNumbers = value.replace(/[^0-9]/g, "");
+        
+        const maxLength = 2; 
+        const truncatedValue = onlyNumbers.slice(0, maxLength);
+        onInputChange(name, truncatedValue);
+        
     };
     
-    const handleNumberInput3 = (e) => {
+    const handleNumberInputCVV = (e) => {
     const { name, value } = e.target;
 
     const onlyNumbers = value.replace(/[^0-9]/g, "");
@@ -43,7 +53,7 @@ function Form({ inputValues, onInputChange }) {
             <label>CARDHOLDER NUMBER</label>
             <input
             type="number"
-            onChange={handleNumberInput16}
+            onChange={handleNumberInputCM}
             name="input1"
             value={inputValues.input1}
             //onChange={handleInput}
@@ -71,7 +81,7 @@ function Form({ inputValues, onInputChange }) {
             <div className='row_form'>
             <input
             type="number"
-            onChange={handleNumberInput2}
+            onChange={handleNumberInputMM}
             name="input3"
             value={inputValues.input3}
             //onChange={handleInput}
@@ -81,7 +91,7 @@ function Form({ inputValues, onInputChange }) {
 
             <input
             type="number"
-            onChange={handleNumberInput2}
+            onChange={handleNumberInputYY}
             name="input4"
             value={inputValues.input4}
             //onChange={handleInput}
@@ -91,7 +101,7 @@ function Form({ inputValues, onInputChange }) {
             
             <input
             type="number"
-            onChange={handleNumberInput3}
+            onChange={handleNumberInputCVV}
             name="input5"
             value={inputValues.input5}
             //onChange={handleInput}

@@ -18,7 +18,8 @@ function CardCraft() {
 
     return(
         <div className="CardCraft">
-            <Card inputValues={inputValues} />
+       
+            <Card inputValues={inputValues}/>
             <Form inputValues={inputValues} onInputChange={handleInputChange}  />
         </div>
     )

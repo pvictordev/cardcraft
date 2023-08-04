@@ -13,6 +13,8 @@ import {RiSecurePaymentLine} from 'react-icons/ri'
 //dc = '3', '0', '6', '8' or '9' 
 
 function Card({ inputValues }) {
+
+    const [paymentNetwork, setPaymentNetwork] = useState(null);
     const addSpacesToNumber = (number) => {
         return number.replace(/\s/g, '').replace(/(.{4})/g, '$1 '); 
     }
@@ -22,36 +24,39 @@ function Card({ inputValues }) {
         }
     } 
 
+
     const getPaymentNetworkIcon = (number) => {
-        const firstDigits = number.substring(0,4);
-       
-        switch (firstDigits) {
+        const firstDigit = number.substring(0,1);
+    
+        switch (firstDigit) {
             case '4':
                 return <FaCcVisa className='visa'/>;
             case '5':
             case '2':
                 return <FaCcMastercard className='mastercard'/>;
-            case '34':
-            case '37':
-                return <SiAmericanexpress className="amx"/>;  
             case '6':
                 return <FaCcDiscover className="discover"/>;
             case '3':
                 return <FaCcJcb className="jcb"/> 
+            case '34':
+            case '37':
+                return <SiAmericanexpress className="amx"/>;  
+            
             case '3068':
             case '3069':
                 return <FaCcDinersClub className="dc"/> 
+            
             default:
                 return <RiSecurePaymentLine/>;
         }
+       
     };
-
-
+    
 
     return(
         <div className="CardCraft_card">
 
-        <div className="card_front">
+        <div className="card_front" >
         
         <div className='front_icons'>
             <AiOutlineBank/>
@@ -74,6 +79,7 @@ function Card({ inputValues }) {
         
             <div className='paymentNetwork'>
                 {getPaymentNetworkIcon(inputValues.input1)}
+
             {/* <FaCcVisa className='visa'/> */}
             {/* <FaCcMastercard className='mastercard'/> */}
             {/* <SiAmericanexpress className="amx"/> */}
