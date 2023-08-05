@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { AiOutlineBank } from 'react-icons/ai';
 import {LuNfc} from 'react-icons/lu'; 
 import {FaCcMastercard, FaCcVisa, FaCcJcb, FaCcDinersClub, FaCcDiscover } from 'react-icons/fa';
@@ -14,7 +14,6 @@ import {RiSecurePaymentLine} from 'react-icons/ri'
 
 function Card({ inputValues }) {
 
-    const [paymentNetwork, setPaymentNetwork] = useState(null);
     const addSpacesToNumber = (number) => {
         return number.replace(/\s/g, '').replace(/(.{4})/g, '$1 '); 
     }
@@ -24,38 +23,97 @@ function Card({ inputValues }) {
         }
     } 
 
-    const getPaymentNetworkIcon = (number) => {
-        const firstDigit = number.substring(0,1);
     
-        switch (firstDigit) {
-            case '4':
-                return <FaCcVisa className='visa'/>;
-            case '5':
-            case '2':
-                return <FaCcMastercard className='mastercard'/>;
-            case '6':
-                return <FaCcDiscover className="discover"/>;
-            case '3':
-                return <FaCcJcb className="jcb"/> 
-            case '34':
-            case '37':
-                return <SiAmericanexpress className="amx"/>;  
-            
-            case '3068':
-            case '3069':
-                return <FaCcDinersClub className="dc"/> 
-            
-            default:
-                return <RiSecurePaymentLine/>;
+    const [backgroundImage, setBackgroundImage] = useState(null);
+    const fileInputRef = useRef(null);
+
+    const handleImageUpload = (event) => {
+        const file = event.target.files[0];
+        if (file) {
+          const imageURL = URL.createObjectURL(file);
+          setBackgroundImage(`url(${imageURL})`);
         }
+      };
+    
+      const handleCardFrontClick = () => {
+        fileInputRef.current.click();
+      };
+
+
+
+    
+
+    const getPaymentNetworkIcon = (number) => {
+        // const firstDigit = number.substring(0,1);
+    
+        // switch (firstDigit) {
+        //     case '4':
+        //         return <FaCcVisa className='visa'/>;
+        //     case '5':
+        //     case '2':
+        //         return <FaCcMastercard className='mastercard'/>;
+        //     case '6':
+        //         return <FaCcDiscover className="discover"/>;
+        //     case '3':
+        //         return <FaCcJcb className="jcb"/> 
+        //     case '34':
+        //     case '37':
+        //         return <SiAmericanexpress className="amx"/>;  
+            
+        //     case '3068':
+        //     case '3069':
+        //         return <FaCcDinersClub className="dc"/> 
+            
+        //     default:
+        //         return <RiSecurePaymentLine/>;
+        // }
+
        
+        if(number.substring(0,4) == '3068') {
+            return <FaCcDinersClub className="dc"/> 
+        }
+        else if(number.substring(0,4) == '3069') {
+            return <FaCcDinersClub className="dc"/>   
+        }
+
+        if(number.substring(0,2) == '34') {
+            return <SiAmericanexpress className="amx" />
+        }
+        else if(number.substring(0,2) == '37') {
+            return <SiAmericanexpress className="amx" />
+        }
+
+        if(number.substring(0,1) == '') {
+            return <RiSecurePaymentLine />
+        }
+        if(number.substring(0,1) == '4') {
+            return <FaCcVisa className="visa" />
+        }
+        else if(number.substring(0,1) === '5') {
+            return <FaCcMastercard className="mastercard" />
+        }
+        else if(number.substring(0,1) === '2') {
+            return <FaCcMastercard className="mastercard" />
+        }
+        else if(number.substring(0,1) == '3') {
+            return <FaCcJcb className="jcb"/> 
+        }
+        else if(number.substring(0,1) == '6') {
+            return <FaCcDiscover className="discover"/>;
+        }
+
     };
     
 
     return(
         <div className="CardCraft_card">
 
-        <div className="card_front" >
+        <div className="card_front" 
+            style={{
+                background: `${backgroundImage} 0 0/cover no-repeat`,
+              }}
+              onClick={handleCardFrontClick}
+        >
         
         <div className='front_icons'>
             <AiOutlineBank/>
@@ -78,7 +136,6 @@ function Card({ inputValues }) {
         
             <div className='paymentNetwork'>
                 {getPaymentNetworkIcon(inputValues.input1)}
-
             {/* <FaCcVisa className='visa'/> */}
             {/* <FaCcMastercard className='mastercard'/> */}
             {/* <SiAmericanexpress className="amx"/> */}
@@ -92,7 +149,17 @@ function Card({ inputValues }) {
             <hr></hr>
             <div>{inputValues.input5}</div>
         </div>
+
+        <input
+        type="file"
+        accept="image/*"
+        ref={fileInputRef}
+        onChange={handleImageUpload}
+        style={{ display: "none" }}
+      />
+       
         </div>
+        
     )
 }
 export default Card
