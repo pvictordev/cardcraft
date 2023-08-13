@@ -27,48 +27,22 @@ function Card({ inputValues }) {
     const [backgroundImage, setBackgroundImage] = useState(null);
     const fileInputRef = useRef(null);
 
+
     const handleImageUpload = (event) => {
         const file = event.target.files[0];
         if (file) {
           const imageURL = URL.createObjectURL(file);
           setBackgroundImage(`url(${imageURL})`);
+          
         }
       };
-    
+      
       const handleCardFrontClick = () => {
         fileInputRef.current.click();
       };
 
-
-
-    
-
     const getPaymentNetworkIcon = (number) => {
-        // const firstDigit = number.substring(0,1);
-    
-        // switch (firstDigit) {
-        //     case '4':
-        //         return <FaCcVisa className='visa'/>;
-        //     case '5':
-        //     case '2':
-        //         return <FaCcMastercard className='mastercard'/>;
-        //     case '6':
-        //         return <FaCcDiscover className="discover"/>;
-        //     case '3':
-        //         return <FaCcJcb className="jcb"/> 
-        //     case '34':
-        //     case '37':
-        //         return <SiAmericanexpress className="amx"/>;  
-            
-        //     case '3068':
-        //     case '3069':
-        //         return <FaCcDinersClub className="dc"/> 
-            
-        //     default:
-        //         return <RiSecurePaymentLine/>;
-        // }
-
-       
+        
         if(number.substring(0,4) == '3068') {
             return <FaCcDinersClub className="dc"/> 
         }
@@ -77,10 +51,10 @@ function Card({ inputValues }) {
         }
 
         if(number.substring(0,2) == '34') {
-            return <SiAmericanexpress className="amx" />
+            return <SiAmericanexpress className="amex" />
         }
         else if(number.substring(0,2) == '37') {
-            return <SiAmericanexpress className="amx" />
+            return <SiAmericanexpress className="amex" />
         }
 
         if(number.substring(0,1) == '') {
@@ -101,27 +75,33 @@ function Card({ inputValues }) {
         else if(number.substring(0,1) == '6') {
             return <FaCcDiscover className="discover"/>;
         }
+        else if(number.substring(0,1) == '1' || '7' || '8' || '9' || '0') {
+            return <RiSecurePaymentLine/>
+        }
 
     };
-    
 
+   
     return(
         <div className="CardCraft_card">
-
-        <div className="card_front" 
-            style={{
-                background: `${backgroundImage} 0 0/cover no-repeat`,
-              }}
-              onClick={handleCardFrontClick}
-        >
-        
-        <div className='front_icons'>
-            <AiOutlineBank/>
-            <LuNfc/>   
-        </div>
             
-            <p className='front_number'>{addSpacesToNumber(inputValues.input1)} </p>
+            <div className="card_front" 
+                style={{
+                    background: `${backgroundImage} 0 0/cover no-repeat`,
+                    position:"relative",
 
+                }}
+                onClick={handleCardFrontClick} 
+            >
+        
+            <div className='front_icons'>
+                <AiOutlineBank/>
+                <LuNfc/>   
+                
+            </div>
+     
+            <p className='front_number'>{addSpacesToNumber(inputValues.input1)} </p>
+        
             <div className='card_details'>
                 <p> 
                 <span>
@@ -132,9 +112,11 @@ function Card({ inputValues }) {
                 <p>
                 <span className="cardDet">{expire(inputValues.input3)}</span><span>{inputValues.input4}</span>
                 </p>
+                
             </div>
-        
+     
             <div className='paymentNetwork'>
+                
                 {getPaymentNetworkIcon(inputValues.input1)}
             {/* <FaCcVisa className='visa'/> */}
             {/* <FaCcMastercard className='mastercard'/> */}
@@ -143,21 +125,22 @@ function Card({ inputValues }) {
             {/* <FaCcDinersClub className="dc"/> */}
             {/* <FaCcDiscover className="discover"/> */}
             </div>
-
+           
         </div>
-        <div className="card_reverso">
-            <hr></hr>
-            <div>{inputValues.input5}</div>
-        </div>
+  
+            <div className="card_reverso">
+                <hr></hr>
+                <div>{inputValues.input5}</div>
+            </div>
 
-        <input
-        type="file"
-        accept="image/*"
-        ref={fileInputRef}
-        onChange={handleImageUpload}
-        style={{ display: "none" }}
-      />
-       
+            <input
+            type="file"
+            accept="image/*"
+            ref={fileInputRef}
+            onChange={handleImageUpload}
+            style={{ display: "none" }}
+        />
+        
         </div>
         
     )
