@@ -1,4 +1,6 @@
 import React, {useState, useRef} from "react";
+import Colors from "./Colors";
+
 
 function Form({ inputValues, onInputChange }) {
 
@@ -78,7 +80,7 @@ function Form({ inputValues, onInputChange }) {
         </label> 
         <label className='cvc'>CVC</label>
     
-            <div className='row_form'>
+        <div className='row_form'>
             <input
             type="number"
             onChange={handleNumberInputMM}
@@ -109,8 +111,10 @@ function Form({ inputValues, onInputChange }) {
             placeholder='e.g. 123'>
             
             </input>
-        </div>
+           
 
+        </div>
+        <Colors/>
         <button >Confirm</button>
         </form>
     )

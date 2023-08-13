@@ -145,6 +145,38 @@
            
         }
         
+        .Colors {
+            display: flex;
+            justify-content: space-between;
+            margin:20px 10px 20px 0;
+           
+            
+            .Colors_1 {
+                border: 1px solid #333;
+                padding: 15px;
+                border-radius: 50px;
+            }
+            .Colors_2 {
+                border: 1px solid #333;
+                padding: 15px;
+                border-radius: 50px;
+            }
+            .Colors_3 {
+                border: 1px solid #333;
+                padding: 15px;
+                border-radius: 50px;
+            }
+            .Colors_4 {
+                border: 1px solid #333;
+                padding: 15px;
+                border-radius: 50px;
+            }
+            .Colors_5 {
+                border: 1px solid #333;
+                padding: 15px;
+                border-radius: 50px;
+            }
+        }
         button {
             margin-top: 10px;
             padding: 10px;
