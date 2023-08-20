@@ -1,7 +1,8 @@
 import React, {useState} from "react"; 
 import Card from "./Card"; 
 import Form from "./Form";
-import Colors from "./Colors";
+
+
 
 function CardCraft() {
 
@@ -13,15 +14,22 @@ function CardCraft() {
         input5:'',         
 
     })
+
+    const [selectedGradient, setSelectedGradient] = useState(null);
+
     const handleInputChange = (name, value) => {
         setInputValues({...inputValues, [name]:value});
     }
 
+
     return(
         <div className="CardCraft">
-            <Card inputValues={inputValues}/>
-            <Form inputValues={inputValues} onInputChange={handleInputChange}  />
+             
+            <Card inputValues={inputValues} selectedGradient={selectedGradient}/>
+           
+            <Form inputValues={inputValues} onInputChange={handleInputChange}  setSelectedGradient={setSelectedGradient}  />
         </div>
+        
     )
     
 }

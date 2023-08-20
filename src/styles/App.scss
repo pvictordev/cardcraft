@@ -36,8 +36,8 @@
                 left: 0;
                 width: 100%;
                 height: 100%;
-                background-color: rgba(0, 0, 0, 0.5); /* Здесь можно настроить цвет и непрозрачность */
-                z-index: 1; /* Разместить элемент затемнения перед элементами с z-index: 0 */
+                // background-color: rgba(0, 0, 0, 0.5); /* Здесь можно настроить цвет и непрозрачность */
+                // z-index: 1; /* Разместить элемент затемнения перед элементами с z-index: 0 */
             }
             .card_details {
                 display: flex;
@@ -53,7 +53,6 @@
     
             .front_number {
                 margin-bottom: 40px;
-                
             }
     
             .paymentNetwork {
@@ -64,7 +63,49 @@
                
             }
         }
-        
+        .Colors {
+            display: flex;
+            justify-content: space-between;
+            margin:10px 10px 35px 10px;
+           
+            
+            .Colors_1 {
+               
+                padding: 15px;
+                border-radius: 50px;
+                background: linear-gradient(to right, #000000, #434343);
+                cursor: pointer;
+                
+            }
+            .Colors_2 {
+                //border: 1px solid #333;
+                padding: 15px;
+                border-radius: 50px;
+                background: linear-gradient(to right, #9796f0, #fbc7d4);
+                cursor:pointer ;
+            }
+            .Colors_3 {
+               
+                padding: 15px;
+                border-radius: 50px;
+                background: linear-gradient(to right, #FC466B, #3F5EFB);
+                cursor:pointer ;
+            }
+            .Colors_4 {
+               
+                padding: 15px;
+                border-radius: 50px;
+                background: linear-gradient(to right, #59C173, #a17fe0, #5D26C1);
+                cursor:pointer ;
+            }
+            .Colors_5 {
+               
+                padding: 15px;
+                border-radius: 50px;
+                background: linear-gradient(to right, #000046, #1CB5E0);
+                cursor:pointer ;
+            }
+        }
         .card_reverso {
             width: 430px;
             height: 270px;
@@ -145,49 +186,7 @@
            
         }
         
-        .Colors {
-            display: flex;
-            justify-content: space-between;
-            margin:20px 10px 20px 0;
-           
-            
-            .Colors_1 {
-               
-                padding: 15px;
-                border-radius: 50px;
-                background: linear-gradient(to right, #000000, #434343);
-                cursor: pointer;
-                
-            }
-            .Colors_2 {
-                //border: 1px solid #333;
-                padding: 15px;
-                border-radius: 50px;
-                background: linear-gradient(to right, #9796f0, #fbc7d4);
-                cursor:pointer ;
-            }
-            .Colors_3 {
-               
-                padding: 15px;
-                border-radius: 50px;
-                background: linear-gradient(to right, #FC466B, #3F5EFB);
-                cursor:pointer ;
-            }
-            .Colors_4 {
-               
-                padding: 15px;
-                border-radius: 50px;
-                background: linear-gradient(to right, #59C173, #a17fe0, #5D26C1);
-                cursor:pointer ;
-            }
-            .Colors_5 {
-               
-                padding: 15px;
-                border-radius: 50px;
-                background: linear-gradient(to right, #000046, #1CB5E0);
-                cursor:pointer ;
-            }
-        }
+        
         button {
             margin-top: 10px;
             padding: 10px;
@@ -200,6 +199,7 @@
         }
     
     }
+    
 }
 
 

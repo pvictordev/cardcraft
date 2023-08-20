@@ -6,13 +6,6 @@ import {SiAmericanexpress} from 'react-icons/si'
 import {RiSecurePaymentLine} from 'react-icons/ri';
 import Colors from "./Colors";
 
-//visa = '4'
-//masterCard = '5' or '2'
-//amx = '3', '4' or '7'
-//discover = '6'
-//jcb = '3'
-//dc = '3', '0', '6', '8' or '9' 
-
 function Card({ inputValues }) {
 
     const addSpacesToNumber = (number) => {
@@ -24,23 +17,21 @@ function Card({ inputValues }) {
         }
     } 
 
-    
     const [backgroundImage, setBackgroundImage] = useState(null);
     const fileInputRef = useRef(null);
-
+    
 
     const handleImageUpload = (event) => {
         const file = event.target.files[0];
         if (file) {
           const imageURL = URL.createObjectURL(file);
           setBackgroundImage(`url(${imageURL})`);
-          
         }
-      };
+    };
       
-      const handleCardFrontClick = () => {
+    const handleCardFrontClick = () => {
         fileInputRef.current.click();
-      };
+    };
 
     const getPaymentNetworkIcon = (number) => {
         
@@ -80,20 +71,26 @@ function Card({ inputValues }) {
             return <RiSecurePaymentLine/>
         }
 
-    };
+    };  
 
-   
+    const [selectedGradient, setSelectedGradient] = useState(null);
     return(
         <div className="CardCraft_card">
             <div className="card_front" 
                 style={{
-                    background: `${backgroundImage} 0 0/cover no-repeat`,
+                    
+
+                    // background: ` ${backgroundImage} 0 0/cover no-repeat`,
+                    background: `linear-gradient(to right, ${selectedGradient || "#000000"}, ${selectedGradient ? "black" : "434343"}) ${backgroundImage ? `url(${backgroundImage})` : ''} 0 0/cover no-repeat`,
+                    
+                    
+                   
                     position:"relative",
 
                 }}
                 onClick={handleCardFrontClick} 
             >
-        
+                
             <div className='front_icons'>
                 <AiOutlineBank/>
                 <LuNfc/>   
@@ -118,32 +115,44 @@ function Card({ inputValues }) {
             <div className='paymentNetwork'>
                 
                 {getPaymentNetworkIcon(inputValues.input1)}
-            {/* <FaCcVisa className='visa'/> */}
-            {/* <FaCcMastercard className='mastercard'/> */}
-            {/* <SiAmericanexpress className="amx"/> */}
-            {/* <FaCcJcb className="jcb"/> */}
-            {/* <FaCcDinersClub className="dc"/> */}
-            {/* <FaCcDiscover className="discover"/> */}
+            
             </div>
            
         </div>
-      
-            <div className="card_reverso">
-                <hr></hr>
-                <div>{inputValues.input5}</div>
-            </div>
-          
-            <input
+        <Colors setSelectedGradient={setSelectedGradient}/>
+
+        <div className="card_reverso">
+            <hr></hr>
+            <div>{inputValues.input5}</div>
+        </div>
+        
+        <input
             type="file"
             accept="image/*"
             ref={fileInputRef}
             onChange={handleImageUpload}
             style={{ display: "none" }}
         />
+       
         
         </div>
+        
         
         
     )
 }
 export default Card
+
+//visa = '4'
+//masterCard = '5' or '2'
+//amx = '3', '4' or '7'
+//discover = '6'
+//jcb = '3'
+//dc = '3', '0', '6', '8' or '9' 
+
+{/* <FaCcVisa className='visa'/> */}
+{/* <FaCcMastercard className='mastercard'/> */}
+{/* <SiAmericanexpress className="amx"/> */}
+{/* <FaCcJcb className="jcb"/> */}
+{/* <FaCcDinersClub className="dc"/> */}
+{/* <FaCcDiscover className="discover"/> */}

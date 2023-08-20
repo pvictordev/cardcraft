@@ -1,5 +1,5 @@
 import React, {useState, useRef} from "react";
-import Colors from "./Colors";
+
 
 
 function Form({ inputValues, onInputChange }) {
@@ -48,7 +48,9 @@ function Form({ inputValues, onInputChange }) {
     const truncatedValue = onlyNumbers.slice(0, maxLength);
     onInputChange(name, truncatedValue);
     };
-    
+
+
+
     
     return (
         <form className="CardCraft_form">
@@ -115,7 +117,7 @@ function Form({ inputValues, onInputChange }) {
            
 
         </div>
-        <Colors/>
+
         <button >Confirm</button>
         </form>
     )
