@@ -78,11 +78,9 @@ function Card({ inputValues }) {
         <div className="CardCraft_card">
             <div className="card_front" 
                 style={{
-                    
-
-                    // background: ` ${backgroundImage} 0 0/cover no-repeat`,
+                 
                     background: `linear-gradient(to right, ${selectedGradient || "#000000"}, ${selectedGradient ? "black" : "434343"}) ${backgroundImage ? `url(${backgroundImage})` : ''} 0 0/cover no-repeat`,
-                    
+                       // background: ` ${backgroundImage} 0 0/cover no-repeat`,   
                     
                    
                     position:"relative",
