@@ -3,7 +3,8 @@ import { AiOutlineBank } from 'react-icons/ai';
 import {LuNfc} from 'react-icons/lu'; 
 import {FaCcMastercard, FaCcVisa, FaCcJcb, FaCcDinersClub, FaCcDiscover } from 'react-icons/fa';
 import {SiAmericanexpress} from 'react-icons/si'
-import {RiSecurePaymentLine} from 'react-icons/ri'
+import {RiSecurePaymentLine} from 'react-icons/ri';
+import Colors from "./Colors";
 
 //visa = '4'
 //masterCard = '5' or '2'
@@ -84,7 +85,6 @@ function Card({ inputValues }) {
    
     return(
         <div className="CardCraft_card">
-            
             <div className="card_front" 
                 style={{
                     background: `${backgroundImage} 0 0/cover no-repeat`,
@@ -127,12 +127,12 @@ function Card({ inputValues }) {
             </div>
            
         </div>
-  
+      
             <div className="card_reverso">
                 <hr></hr>
                 <div>{inputValues.input5}</div>
             </div>
-
+          
             <input
             type="file"
             accept="image/*"
@@ -142,6 +142,7 @@ function Card({ inputValues }) {
         />
         
         </div>
+        
         
     )
 }

@@ -49,6 +49,7 @@ function Form({ inputValues, onInputChange }) {
     onInputChange(name, truncatedValue);
     };
     
+    
     return (
         <form className="CardCraft_form">
         <div className='column_form'>

@@ -1,6 +1,7 @@
 import React, {useState} from "react"; 
 import Card from "./Card"; 
 import Form from "./Form";
+import Colors from "./Colors";
 
 function CardCraft() {
 
@@ -18,7 +19,6 @@ function CardCraft() {
 
     return(
         <div className="CardCraft">
-       
             <Card inputValues={inputValues}/>
             <Form inputValues={inputValues} onInputChange={handleInputChange}  />
         </div>

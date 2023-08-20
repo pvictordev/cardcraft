@@ -152,29 +152,40 @@
            
             
             .Colors_1 {
-                border: 1px solid #333;
+               
                 padding: 15px;
                 border-radius: 50px;
+                background: linear-gradient(to right, #000000, #434343);
+                cursor: pointer;
+                
             }
             .Colors_2 {
-                border: 1px solid #333;
+                //border: 1px solid #333;
                 padding: 15px;
                 border-radius: 50px;
+                background: linear-gradient(to right, #9796f0, #fbc7d4);
+                cursor:pointer ;
             }
             .Colors_3 {
-                border: 1px solid #333;
+               
                 padding: 15px;
                 border-radius: 50px;
+                background: linear-gradient(to right, #FC466B, #3F5EFB);
+                cursor:pointer ;
             }
             .Colors_4 {
-                border: 1px solid #333;
+               
                 padding: 15px;
                 border-radius: 50px;
+                background: linear-gradient(to right, #59C173, #a17fe0, #5D26C1);
+                cursor:pointer ;
             }
             .Colors_5 {
-                border: 1px solid #333;
+               
                 padding: 15px;
                 border-radius: 50px;
+                background: linear-gradient(to right, #000046, #1CB5E0);
+                cursor:pointer ;
             }
         }
         button {
