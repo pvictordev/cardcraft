@@ -79,10 +79,10 @@ function Card({ inputValues }) {
             <div className="card_front" 
                 style={{
                  
-                    background: `linear-gradient(to right, ${selectedGradient || "#000000"}, ${selectedGradient ? "black" : "434343"}) ${backgroundImage ? `url(${backgroundImage})` : ''} 0 0/cover no-repeat`,
-                       // background: ` ${backgroundImage} 0 0/cover no-repeat`,   
-                    
-                   
+                    background: `linear-gradient(to right, ${selectedGradient}), ${backgroundImage ? `url(${backgroundImage})` : ''} 0 0/cover no-repeat`,
+                
+                    // background: ` ${backgroundImage} 0 0/cover no-repeat`,   
+
                     position:"relative",
 
                 }}
@@ -126,7 +126,7 @@ function Card({ inputValues }) {
         
         <input
             type="file"
-            accept="image/*"
+            //accept="image/*"
             ref={fileInputRef}
             onChange={handleImageUpload}
             style={{ display: "none" }}

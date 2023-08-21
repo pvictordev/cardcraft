@@ -27,9 +27,10 @@ function CardCraft() {
              
             <Card inputValues={inputValues} selectedGradient={selectedGradient}/>
            
-            <Form inputValues={inputValues} onInputChange={handleInputChange}  setSelectedGradient={setSelectedGradient}  />
+            <Form inputValues={inputValues} onInputChange={handleInputChange}/>
+            {/* //  setSelectedGradient={setSelectedGradient} */}
         </div>
-        
+       
     )
     
 }

@@ -2,19 +2,20 @@ import React, {} from "react";
 
 
 const Colors = ({setSelectedGradient}) => {
+    
     const colorGradients = [
         "#000000, #434343",
-        "#9796f0, #fbc7d4",
-        "#FC466B, #3F5EFB", 
-        "#59C173, #a17fe0, #5D26C1",
-        "#000046, #1CB5E0",
-
-
+        "#8693AB, #BDD4E7",
+        "#5F0A87, #A4508B", 
+        "#B82E1F, #000000",
+        "#380036, #0CBABA",
         // Добавьте остальные градиенты
     ];
     const handleColorClick = (gradient) => {
         setSelectedGradient(gradient)
+        
     };
+
 
     return(
         // <div className="Colors">
