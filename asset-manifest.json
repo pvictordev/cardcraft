@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/cardcraft/static/css/main.fbad641d.css",
+    "main.js": "/cardcraft/static/js/main.2bc939d4.js",
+    "index.html": "/cardcraft/index.html",
+    "main.fbad641d.css.map": "/cardcraft/static/css/main.fbad641d.css.map",
+    "main.2bc939d4.js.map": "/cardcraft/static/js/main.2bc939d4.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fbad641d.css",
+    "static/js/main.2bc939d4.js"
+  ]
+}
