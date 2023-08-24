@@ -204,117 +204,117 @@
 
 
 
-@media (max-width: 450px) {
+// @media (max-width: 450px) {
     
-    .CardCraft_card {
-        .card_front{
-            width: 280px;
-            height: 140px;
-            font-size: 17px;
-            margin-bottom: 30px;
-            border-radius: 12px;
+//     .CardCraft_card {
+//         .card_front{
+//             width: 280px;
+//             height: 140px;
+//             font-size: 17px;
+//             margin-bottom: 30px;
+//             border-radius: 12px;
             
-            .card_details {
-                font-size: 12px;
-            }
-            .front_icons {
-                margin-bottom: 15px;
+//             .card_details {
+//                 font-size: 12px;
+//             }
+//             .front_icons {
+//                 margin-bottom: 15px;
                
-            } 
+//             } 
     
-            .front_number {
-                margin-bottom: 15px;
+//             .front_number {
+//                 margin-bottom: 15px;
                 
-            }
+//             }
     
-            .paymentNetwork {
-                padding-right: 12px;
+//             .paymentNetwork {
+//                 padding-right: 12px;
                
-            }
-        }
+//             }
+//         }
         
-        .card_reverso {
-            width: 280px;
-            height: 140px;
+//         .card_reverso {
+//             width: 280px;
+//             height: 140px;
     
-            hr{
-                height: 25px;
-            }
-            div { 
-                margin: 15px 40px;
-                font-size: 8px;
-                padding: 6px;
-                height: 20px;
-            }
+//             hr{
+//                 height: 25px;
+//             }
+//             div { 
+//                 margin: 15px 40px;
+//                 font-size: 8px;
+//                 padding: 6px;
+//                 height: 20px;
+//             }
             
-        }
+//         }
        
         
-    }
-    .CardCraft_form {
+//     }
+//     .CardCraft_form {
   
-        margin-top: 40px;        
-        input::placeholder {
-            font-size: 15px;
-        }
+//         margin-top: 40px;        
+//         input::placeholder {
+//             font-size: 15px;
+//         }
     
-        .column_form {
-            margin-left: 20px;
-            label {
-                font-size: 13px;
-            }
-            input {
-                margin-bottom: 20px;
-                margin-right: 20px;
-                width: 280px;
-                height: 30px;
-            }
-        }
-        .expire {
-            margin-right: 26px;
-            margin-left: 20px;
-            font-size: 13px;
-        }
-        .cvc {
-            font-size: 13px;
-        }
+//         .column_form {
+//             margin-left: 20px;
+//             label {
+//                 font-size: 13px;
+//             }
+//             input {
+//                 margin-bottom: 20px;
+//                 margin-right: 20px;
+//                 width: 280px;
+//                 height: 30px;
+//             }
+//         }
+//         .expire {
+//             margin-right: 26px;
+//             margin-left: 20px;
+//             font-size: 13px;
+//         }
+//         .cvc {
+//             font-size: 13px;
+//         }
     
-        .row_form {
+//         .row_form {
             
-            input:first-child {
-                margin-left: 20px;
-            }
-            input {
-                width: 60px;
-                margin: 10px 10px 20px 0;
-                padding: 5px;
-                border-radius: 5px;
+//             input:first-child {
+//                 margin-left: 20px;
+//             }
+//             input {
+//                 width: 60px;
+//                 margin: 10px 10px 20px 0;
+//                 padding: 5px;
+//                 border-radius: 5px;
             
-            }
+//             }
             
-            input:nth-child(3) {
-                width: 140px;
-            };
+//             input:nth-child(3) {
+//                 width: 140px;
+//             };
            
           
-        }
+//         }
         
-        button {
-            margin-left: 20px;       
-            width: 280px;
-            font-size: 15px;
-        }
+//         button {
+//             margin-left: 20px;       
+//             width: 280px;
+//             font-size: 15px;
+//         }
     
-    }
-}
-@media(max-width:315px) {
-    .CardCraft_card {
-        margin-left: 20px;
-    }
-    .CardCraft_form {
-        margin-left: 20px;
-    }
-}
+//     }
+// }
+// @media(max-width:315px) {
+//     .CardCraft_card {
+//         margin-left: 20px;
+//     }
+//     .CardCraft_form {
+//         margin-left: 20px;
+//     }
+// }
 
                   
 
