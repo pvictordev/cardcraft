@@ -17,21 +17,21 @@ function Card({ inputValues }) {
         }
     } 
 
-    const [backgroundImage, setBackgroundImage] = useState(null);
-    const fileInputRef = useRef(null);
+    // const [backgroundImage, setBackgroundImage] = useState(null);
+    // const fileInputRef = useRef(null);
     
 
-    const handleImageUpload = (event) => {
-        const file = event.target.files[0];
-        if (file) {
-          const imageURL = URL.createObjectURL(file);
-          setBackgroundImage(`url(${imageURL})`);
-        }
-    };
+    // const handleImageUpload = (event) => {
+    //     const file = event.target.files[0];
+    //     if (file) {
+    //       const imageURL = URL.createObjectURL(file);
+    //       setBackgroundImage(`url(${imageURL})`);
+    //     }
+    // };
       
-    const handleCardFrontClick = () => {
-        fileInputRef.current.click();
-    };
+    // const handleCardFrontClick = () => {
+    //     fileInputRef.current.click();
+    // };
 
     const getPaymentNetworkIcon = (number) => {
         
@@ -78,15 +78,15 @@ function Card({ inputValues }) {
         <div className="CardCraft_card">
             <div className="card_front" 
                 style={{
+                    background: `linear-gradient(to right, ${selectedGradient})`,
+                    //background: ` ${backgroundImage} 0 0/cover no-repeat`,  
+                    // background: `linear-gradient(to right, ${selectedGradient}), ${backgroundImage ? `url(${backgroundImage})` : ''} 0 0/cover no-repeat`,
                  
-                    background: `linear-gradient(to right, ${selectedGradient}), ${backgroundImage ? `url(${backgroundImage})` : ''} 0 0/cover no-repeat`,
-                
-                    //background: ` ${backgroundImage} 0 0/cover no-repeat`,   
 
                     position:"relative",
 
                 }}
-                onClick={handleCardFrontClick} 
+                // onClick={handleCardFrontClick} 
             >
                 
             <div className='front_icons'>
@@ -124,13 +124,13 @@ function Card({ inputValues }) {
             <div>{inputValues.input5}</div>
         </div>
         
-        <input
+        {/* <input
             type="file"
             //accept="image/*"
             ref={fileInputRef}
             onChange={handleImageUpload}
             style={{ display: "none" }}
-        />
+        /> */}
        
         
         </div>
