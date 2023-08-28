@@ -81,8 +81,6 @@ function Card({ inputValues }) {
                     background: `linear-gradient(to right, ${selectedGradient})`,
                     //background: ` ${backgroundImage} 0 0/cover no-repeat`,  
                     // background: `linear-gradient(to right, ${selectedGradient}), ${backgroundImage ? `url(${backgroundImage})` : ''} 0 0/cover no-repeat`,
-                 
-
                     position:"relative",
 
                 }}

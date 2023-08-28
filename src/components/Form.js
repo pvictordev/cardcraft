@@ -118,7 +118,7 @@ function Form({ inputValues, onInputChange }) {
 
         </div>
 
-        <button >Confirm</button>
+        <button className="button" >Confirm</button>
         </form>
     )
 }
