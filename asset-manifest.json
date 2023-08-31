@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/cardcraft/static/css/main.fbad641d.css",
-    "main.js": "/cardcraft/static/js/main.2bc939d4.js",
+    "main.css": "/cardcraft/static/css/main.fdcd4f5b.css",
+    "main.js": "/cardcraft/static/js/main.89039c2e.js",
     "index.html": "/cardcraft/index.html",
-    "main.fbad641d.css.map": "/cardcraft/static/css/main.fbad641d.css.map",
-    "main.2bc939d4.js.map": "/cardcraft/static/js/main.2bc939d4.js.map"
+    "main.fdcd4f5b.css.map": "/cardcraft/static/css/main.fdcd4f5b.css.map",
+    "main.89039c2e.js.map": "/cardcraft/static/js/main.89039c2e.js.map"
   },
   "entrypoints": [
-    "static/css/main.fbad641d.css",
-    "static/js/main.2bc939d4.js"
+    "static/css/main.fdcd4f5b.css",
+    "static/js/main.89039c2e.js"
   ]
 }
