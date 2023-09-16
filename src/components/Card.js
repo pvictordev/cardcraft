@@ -17,22 +17,6 @@ function Card({ inputValues }) {
         }
     } 
 
-    // const [backgroundImage, setBackgroundImage] = useState(null);
-    // const fileInputRef = useRef(null);
-    
-
-    // const handleImageUpload = (event) => {
-    //     const file = event.target.files[0];
-    //     if (file) {
-    //       const imageURL = URL.createObjectURL(file);
-    //       setBackgroundImage(`url(${imageURL})`);
-    //     }
-    // };
-      
-    // const handleCardFrontClick = () => {
-    //     fileInputRef.current.click();
-    // };
-
     const getPaymentNetworkIcon = (number) => {
         
         if(number.substring(0,4) == '3068') {
@@ -74,17 +58,16 @@ function Card({ inputValues }) {
     };  
 
     const [selectedGradient, setSelectedGradient] = useState(null);
+
     return(
         <div className="CardCraft_card">
             <div className="card_front" 
                 style={{
                     background: `linear-gradient(to right, ${selectedGradient})`,
-                    //background: ` ${backgroundImage} 0 0/cover no-repeat`,  
-                    // background: `linear-gradient(to right, ${selectedGradient}), ${backgroundImage ? `url(${backgroundImage})` : ''} 0 0/cover no-repeat`,
                     position:"relative",
 
                 }}
-                // onClick={handleCardFrontClick} 
+                
             >
                 
             <div className='front_icons'>
@@ -122,15 +105,7 @@ function Card({ inputValues }) {
             <div>{inputValues.input5}</div>
         </div>
         
-        {/* <input
-            type="file"
-            //accept="image/*"
-            ref={fileInputRef}
-            onChange={handleImageUpload}
-            style={{ display: "none" }}
-        /> */}
-       
-        
+ 
         </div>
         
         
@@ -138,17 +113,3 @@ function Card({ inputValues }) {
     )
 }
 export default Card
-
-//visa = '4'
-//masterCard = '5' or '2'
-//amx = '3', '4' or '7'
-//discover = '6'
-//jcb = '3'
-//dc = '3', '0', '6', '8' or '9' 
-
-{/* <FaCcVisa className='visa'/> */}
-{/* <FaCcMastercard className='mastercard'/> */}
-{/* <SiAmericanexpress className="amx"/> */}
-{/* <FaCcJcb className="jcb"/> */}
-{/* <FaCcDinersClub className="dc"/> */}
-{/* <FaCcDiscover className="discover"/> */}
